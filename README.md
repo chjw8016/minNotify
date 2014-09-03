@@ -1,6 +1,6 @@
 minNotfiy
 =========
-''' javascript
+``` javascript
 $.minNotify({
              content:"",
              escClose:false,
