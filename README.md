@@ -1,6 +1,7 @@
 minNotfiy
 =========
-'''$.minNotify({
+''' javascript
+$.minNotify({
              content:"",
              escClose:false,
              closeBgClick:false,
