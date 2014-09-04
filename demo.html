@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="minnotify.css">
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="minnotify.js"></script>
+    <style type="text/css">
+        .cd-popup-trigger {
+            display: block;
+            width: 170px;
+            height: 50px;
+            line-height: 50px;
+            margin: 3em auto;
+            text-align: center;
+            color: #FFF;
+            font-size: 14px;
+            font-size: 0.875rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 50em;
+            background: #35a785;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<a id="notify" class="cd-popup-trigger">弹出层</a>
+<a id="autoClose" class="cd-popup-trigger">2秒后自动关闭</a>
+<a id="confirm" class="cd-popup-trigger">确认对话框</a>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $("#notify").on("click",function(e){
+            $.minNotify({
+                content:"点击X，按下Esc，点击背景，点击关闭，可以关闭对话框",
+                escClose:true,
+                closeBgClick:true,
+                btnClose:true
+            })
+        })
+        $("#autoClose").on("click",function(e){
+            $.minNotify({
+                content:"2秒后自动关闭",
+                autoClose:true,
+                alignCenter:true
+            })
+        })
+        $("#confirm").on("click",function(e){
+            $.minNotify({
+                content:"这是一个确认对话框，有回调函数",
+                confirm:true,
+                alignCenter:true,
+                callBack:function(e){
+                    alert(e)
+                }
+            })
+        })
+    })
+
+</script>
+
+</html>

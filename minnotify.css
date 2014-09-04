@@ -68,10 +68,19 @@ xpopup
     padding: 3em 1em;
     line-height: 1.5em;
     text-align: left;
-    text-indent: 2em;
     font-size: 14px;
     font-family: Helvetica;
     color: #666;
+}
+.cd-popup-title {
+    position:relative;
+    left:1em;
+    top:1em;
+    text-align: left;
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #6C7B97;
+    font-weight: bold;
 }
 .cd-buttons { position: relative;width: 100%}
 .cd-popup-container .cd-buttons  a:last-child {
@@ -89,8 +98,8 @@ xpopup
 .cd-popup-container .cd-buttons a {
     cursor: pointer;
     display: inline-block;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     text-transform: uppercase;
     color: #FFF;
     -webkit-transition: background-color 0.2s;
@@ -121,6 +130,7 @@ xpopup
     transform: rotate(45deg);
     left: 8px;
 }
+
 .cd-popup-container .cd-popup-close::after {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
